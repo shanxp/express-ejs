@@ -55,9 +55,8 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-env/*
-!env/default.json
-!env/injector.js
+app/env/*
+!app/env/default.json
 
 # pm2 json
 pm2.json

@@ -2,5 +2,17 @@
     <div class="jumbotron">
         <h1>This is great</h1>
         <p>Welcome to templating using EJS</p>
+        <% if(params.users.length) { %>
+        <ul>
+        <% 
+            for (let i=0; i<params.users.length; i++) {
+                let user = params.users[i];
+        %>
+        <li> <%=user.username %> </li>
+        <% } %>
+        </ul>
+        <% } else { %>
+        <b> No users! </b>
+        <% } %>
     </div>
 </main>

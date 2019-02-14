@@ -1,0 +1,12 @@
+{
+  "port": "3000",
+  "db_driver": "mysql2",  
+  "db_main_host": "<string> master db host",
+  "db_main_name": "<string> write bridge db name",  
+  "db_main_user": "<string> write db user name",
+  "db_main_password": "<string> write db password",
+  "db_read_host": "<string> read db host",
+  "db_read_name": "<string> read bridge db name",
+  "db_read_user": "<string> read db user name",
+  "db_read_password": "<string> read db password"
+}

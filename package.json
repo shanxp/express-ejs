@@ -1,16 +1,24 @@
 {
-  "name": "express4",
+  "name": "express-with-view",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test jest",
+    "start": "pm2 start ecosystem.config.js --env prod",
+    "dev": "pm2 start ecosystem.config.js --env dev",
+    "restart": "pm2 delete ecosystem.config.js --env dev && pm2 start ecosystem.config.js --env dev",
+    "stop": "pm2 stop ecosystem.config.js",
+    "delete": "pm2 delete ecosystem.config.js",
+    "log": "pm2 log"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "knex": "^0.16.3",
+    "mysql2": "^1.6.5",
     "path": "^0.12.7"
   },
   "devDependencies": {

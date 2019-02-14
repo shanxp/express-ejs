@@ -1,6 +1,6 @@
 
 const healthCheckController = {
-  hc: (req, res) => res.render('layout', { page: 'pages/hc/index', params: { title: 'Welcome' } }),
+  hc: (req, res) => res.sendStatus(200),
 };
 
 module.exports = healthCheckController;
