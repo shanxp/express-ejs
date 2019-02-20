@@ -8,9 +8,8 @@ const config = {
 };
 
 try {
-  const currEnv = JSON.parse(fs.readFileSync(`${__dirname}/app/env/${process.env.NODE_ENV}.json`));
+  const currEnv = JSON.parse(fs.readFileSync(`${config.app_root}/env/${process.env.NODE_ENV}.json`));
   Object.keys(currEnv).forEach((key) => {
-    // process.env[key] = currEnv[key];
     config[key] = currEnv[key];
   });
 } catch (e) {
