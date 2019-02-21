@@ -17,8 +17,9 @@ app.set('view engine', 'ejs');
 app.disable('x-powered-by');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); // x-www-form-urlencoded with deep objects
-app.use(express.static('public'));
+app.use(express.static('public'));  // css,js
+app.use(middlewares.requestId.add); // add unique request id to every request
 app.use('/', routes); // this should be last in middleware order
-app.use(middlewares.error.handle);
+app.use(middlewares.error.handle); // this should be last in app.use
 
 module.exports = app;

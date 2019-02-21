@@ -4,7 +4,7 @@ const error = {
       // display error
       let statusCode = error.status || 500;
       res.status(statusCode);
-      res.render('layout', { page: 'errors/default', params: { title: 'Error occured', message: 'error occured!' } });
+      res.render('layout', { page: 'errors/default', params: { title: 'Error occured', message: `error occured! ${req.requestId}` } });
     }
     next(); 
   }
