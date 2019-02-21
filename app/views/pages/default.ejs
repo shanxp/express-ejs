@@ -2,7 +2,7 @@
     <div class="jumbotron">
         <h1>This is great</h1>
         <p>Welcome to templating using EJS</p>
-        <% if(params.users.length) { %>
+        <% if(params.users && params.users.length) { %>
         <ul>
         <% 
             for (let i=0; i<params.users.length; i++) {
