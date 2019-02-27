@@ -1,6 +1,6 @@
 <main>
     <div class="jumbotron">
-        <h1>This is great <%= __('Hello') %></h1>
+        <h1>This is great <%= __('Hello') %> <%=config.app.name %> <%=config.app.version %></h1>
         <h3><%= __n('%s dog', 50) %></h3>
         <p>Welcome to templating using EJS</p>
         <% if(params.users && params.users.length) { %>
