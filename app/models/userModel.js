@@ -1,7 +1,7 @@
 /* eslint-disable arrow-body-style */
 const path = require('path');
 
-const dbPath = path.join(config.app_root, '/config/db');
+const dbPath = path.join(config.path.app, '/config/db');
 const db = require(dbPath);
 
 const tableUsers = 'USERS as u';

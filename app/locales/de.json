@@ -1,0 +1,19 @@
+{
+  "Hello": "Hallo",
+  "Hello %s, how are you today?": "Hallo %s, wie geht's?",
+  "weekend": "Wochenende",
+  "Howdy": "Howdy",
+  "%s cat": {
+    "one": "%s Katze",
+    "other": "%s Katzen"
+  },
+  "There is one monkey in the %%s": {
+    "one": "Es gibt einen Affen im %%s",
+    "other": "Es gibt %d Affen im %%s"
+  },
+  "tree": "Baum",
+  "%s dog": {
+    "one": "Ein Hund",
+    "other": "[0] kein Hund|[2,5] einige Hunde|[6,11] viele Hunde|[12,36] Dutzende Hunde|eine Horde von %s Hunden"
+  }
+}
