@@ -7,11 +7,10 @@ const { User } = models;
 
 const homeController = {
   index: async (req, res, next) => {
-    try {      
+    try {
       const users = await User.list(10); // limit, offset
       res.render('layout', { page: null, params: { title: 'Welcome', users } });
-    }
-    catch(e){
+    } catch (e) {
       next(e);
     }
   },

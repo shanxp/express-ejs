@@ -1,9 +1,7 @@
 
-const path = require('path');
-
 const errorController = {
   index: (req, res, next) => {
-    let error = new Error('page not found');
+    const error = new Error('page not found');
     error.status = 404;
     next(error);
   },

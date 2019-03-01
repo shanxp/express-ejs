@@ -7,7 +7,7 @@ const config = {
   app: {
     name: pkg.name,
     version: pkg.version,
-  },  
+  },
   path: {
     project: __dirname,
     app: path.join(__dirname, '/app'),
@@ -22,7 +22,7 @@ try {
   });
 } catch (e) {
   // eslint-disable-next-line no-console
-  console.log(e);
+  console.log(__filename, e);
   process.exit(1);
 }
 

@@ -5,6 +5,5 @@ module.exports = {
     },
     "rules": {
         "import/no-dynamic-require": false,
-        "consistent-return": false,
-    }    
+    }
 };
