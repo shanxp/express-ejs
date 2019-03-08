@@ -5,5 +5,6 @@ module.exports = {
     },
     "rules": {
         "import/no-dynamic-require": false,
+        // "import/no-extraneous-dependencies": false,
     }
 };

@@ -1,3 +1,4 @@
+/* eslint-disable arrow-body-style */
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -15,25 +16,24 @@ const middlewares = require(middlewarePath);
 
 i18n.configure({
   // setup some locales - other locales default to en silently
-  locales: ['en', 'de'], 
+  locales: ['en', 'de'],
   // sets a custom cookie name to parse locale settings from
-  cookie: 'express-with-view-lang', 
-  directory: config.path.app + '/locales'
+  cookie: 'lang',
+  directory: `${config.path.app}/locales`,
 });
- 
-// cookieParser to expose cookies to req.cookies
-app.use(cookieParser());
-// i18n init parses req for language headers, cookies, etc.
-app.use(i18n.init);
 
 app.set('views', path.join(config.path.app, '/views'));
 app.set('view engine', 'ejs');
-
 app.disable('x-powered-by');
+
+app.use(cookieParser());
+app.use(middlewares.session);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); // x-www-form-urlencoded with deep objects
-app.use(express.static('public'));  // css,js
+app.use(i18n.init);
+app.use(express.static('public')); // css,js
 app.use(middlewares.requestId.add); // add unique request id to every request
+app.use(middlewares.currentUser); // current user if logged in
 app.use('/', routes); // this should be last in middleware order
 app.use(middlewares.error.handle); // this should be last in app.use
 

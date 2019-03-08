@@ -8,5 +8,9 @@
   "db_read_host": "<string> read db host",
   "db_read_name": "<string> read bridge db name",
   "db_read_user": "<string> read db user name",
-  "db_read_password": "<string> read db password"
+  "db_read_password": "<string> read db password",
+  "session_name": "<string>",
+  "session_secret": "<string>",
+  "session_expiry": "time in milliseconds e.g 3600000 is 1 hr",
+  "secure_cookie": "false" 
 }
