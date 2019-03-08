@@ -39,7 +39,7 @@ const authController = {
           res.redirect('/login');
         });
       } else {
-        throw new Error('Logout could not be performed as no session found!');
+        res.redirect('/');
       }
     } catch (e) {
       next(e);
