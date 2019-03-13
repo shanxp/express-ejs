@@ -12,5 +12,7 @@
   "session_name": "<string>",
   "session_secret": "<string>",
   "session_expiry": "time in milliseconds e.g 3600000 is 1 hr",
-  "secure_cookie": "false" 
+  "secure_cookie": "false",
+  "session_store_host": "e.g localhost",
+  "session_store_port": "e.g 6379"
 }

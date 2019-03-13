@@ -1,8 +1,22 @@
 /* eslint-disable arrow-body-style */
 const session = require('express-session');
+const RedisStore = require('connect-redis')(session);
+const redis = require('redis');
 const uuid = require('uuid/v4');
 
+const cnf = {
+  host: config.session_store_host,
+  port: config.session_store_port,
+};
+
+const redisClient = redis.createClient(cnf);
+
+const options = {
+  client: redisClient,
+};
+
 const s = session({
+  store: new RedisStore(options),
   name: `${config.session_name}`,
   genid: () => {
     // req.sessionID
