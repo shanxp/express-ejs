@@ -10,7 +10,7 @@ const authController = {
       } else if (req.method.toUpperCase() == 'POST') {
         const username = req.body.username || null;
         const password = req.body.password || null;
-        if (username == 'shan' && password == '123') {
+        if (username == 'shan' && password == '123') { // Validate here
           const user = {
             authenticated: true,
             id: 1,
@@ -21,6 +21,8 @@ const authController = {
             user,
           };
           res.redirect('/');
+        } else {
+          res.redirect('/login');
         }
       } else {
         res.render('layout', {
