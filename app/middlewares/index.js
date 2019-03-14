@@ -1,9 +1,9 @@
 
-const error = require('./errorHandler');
-const requestId = require('./requestId');
-const session = require('./session');
-const auth = require('./auth');
-const currentUser = require('./currentUser');
+const error = require('./ErrorHandlerMiddleware');
+const requestId = require('./RequestIdMiddleware');
+const session = require('./SessionMiddleware');
+const auth = require('./AuthMiddleware');
+const currentUser = require('./CurrentUserMiddleware');
 
 module.exports = {
   error,

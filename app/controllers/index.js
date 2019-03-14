@@ -1,8 +1,8 @@
 
-const healthCheckController = require('./hc/healthCheckController');
-const homeController = require('./home/homeController');
-const errorController = require('./error/errorController');
-const authController = require('./auth/authController');
+const healthCheckController = require('./HealthCheckController');
+const homeController = require('./HomeController');
+const errorController = require('./ErrorController');
+const authController = require('./AuthController');
 
 module.exports = {
   healthCheckController,
