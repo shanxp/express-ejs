@@ -14,5 +14,12 @@
   "session_expiry": "time in milliseconds e.g 3600000 is 1 hr",
   "secure_cookie": "false",
   "session_store_host": "e.g localhost",
-  "session_store_port": "e.g 6379"
+  "session_store_port": "e.g 6379",
+  "logger_host": "e.g 10.1.10.123",
+  "logger_port": "e.g 24224",
+  "logger_timeout": "100 in ms",
+  "logger_reconnect_interval": "3000 in ms",
+  "logger_base_prefix": "buffer",
+  "logger_endpoint_prefix": "logger",
+  "queue_endpoint_prefix": "queue"  
 }

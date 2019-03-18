@@ -1,17 +1,20 @@
 
 const fs = require('fs');
 const path = require('path');
+const ip = require('ip');
 const pkg = require('./package.json');
 
 const config = {
   app: {
     name: pkg.name,
     version: pkg.version,
+    ip: ip.address(),
   },
   path: {
     project: __dirname,
     app: path.join(__dirname, '/app'),
     env: path.join(__dirname, '/app/env'),
+    libs: path.join(__dirname, '/app/libs'),
   },
 };
 
