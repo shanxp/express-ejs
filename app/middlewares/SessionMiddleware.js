@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable arrow-body-style */
 const session = require('express-session');
 const RedisStore = require('connect-redis')(session);
@@ -10,6 +11,11 @@ const cnf = {
 };
 
 const redisClient = redis.createClient(cnf);
+
+redisClient.on('error', (err) => {
+  console.error(`Redis ${err}`);
+  process.exit(1);
+});
 
 const options = {
   client: redisClient,
