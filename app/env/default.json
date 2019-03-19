@@ -20,6 +20,6 @@
   "logger_timeout": "100 in ms",
   "logger_reconnect_interval": "3000 in ms",
   "logger_base_prefix": "buffer",
-  "logger_endpoint_prefix": "logger",
-  "queue_endpoint_prefix": "queue"  
+  "logger_endpoint_prefix": "logger  e.g fluentd config => buffer.logger.**",
+  "queue_endpoint_prefix": "queue e.g fluentd config => buffer.queue.**"  
 }

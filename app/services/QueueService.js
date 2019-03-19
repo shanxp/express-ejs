@@ -1,4 +1,4 @@
-
+/* eslint-disable no-console */
 const logger = require(`${config.path.libs}/Logger`);
 
 const q = {
@@ -11,6 +11,9 @@ const q = {
       ip: `${config.app.ip}`,
     };
     logger.emit(`${config.queue_endpoint_prefix}.${type}`, d);
+    logger.on('error', (error) => {
+      console.error(__filename, error);
+    });
   },
 };
 
