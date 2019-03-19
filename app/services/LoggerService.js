@@ -10,9 +10,6 @@ const l = {
       ip: `${config.app.ip}`,
     };
     logger.emit(`${config.logger_endpoint_prefix}.${type}`, d);
-    logger.on('error', (error) => {
-      console.error(__filename, error);
-    });
   },
 };
 

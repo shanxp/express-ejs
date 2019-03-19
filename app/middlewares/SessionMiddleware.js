@@ -12,6 +12,10 @@ const cnf = {
 
 const redisClient = redis.createClient(cnf);
 
+redisClient.on('connect', () => {
+  console.log('Redis is connected!');
+});
+
 redisClient.on('error', (err) => {
   console.error(`Redis ${err}`);
   process.exit(1);
