@@ -13,11 +13,11 @@ const cnf = {
 const redisClient = redis.createClient(cnf);
 
 redisClient.on('connect', () => {
-  console.log('Redis is connected!');
+  console.log(`Redis is connected to ${config.session_store_host}:${config.session_store_port}`);
 });
 
 redisClient.on('error', (err) => {
-  console.error(`Redis ${err}`);
+  console.error(`Redis connection to ${config.session_store_host}:${config.session_store_port} failed. ${err}`);
   process.exit(1);
 });
 

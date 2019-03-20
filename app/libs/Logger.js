@@ -9,7 +9,7 @@ logger.configure(config.logger_base_prefix, {
 });
 
 logger.on('connect', () => {
-  console.log('Logger service is active!');
+  console.log(`Logger service is connected to ${config.logger_host}:${config.logger_port}`);
 });
 logger.on('error', (error) => {
   console.error(__filename, error);
